@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidLMFTFYPkg">
+
+    <Menus>
+      <Menu guid="guidLMFTFYCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu"
+                id="IDG_VS_MM_TOOLSADDINS" />
+        <Strings>
+          <ButtonText>LMFTFY</ButtonText>
+          <CommandName>LMFTFY</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidLMFTFYCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidLMFTFYCmdSet" id="TopLevelMenu"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindRegions" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find regions</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindDeprecatedStyles" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find deprecated styles</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindRepeatedBlankLines" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find repeated blank lines</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindTrailingWhiteSpace" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find trailing whitespace</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindEmptyCatch" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find empty catch blocks</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindHardCodedStyles" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find hard coded styles</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLMFTFYCmdSet" id="cmdidFindCommentedCode" priority="0x0100" type="Button">
+        <Parent guid="guidLMFTFYCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Find commented code (Experimental)</ButtonText>
+        </Strings>
+      </Button>
+
+    </Buttons>
+
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidLMFTFYPkg" value="{a443524d-9762-42d0-b152-8c2870b6efe0}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidLMFTFYCmdSet" value="{48e41467-6e9b-4dcb-9a7a-556015762743}">
+
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="TopLevelMenu" value="0x1021"/>
+
+      <IDSymbol name="cmdidFindRegions" value="0x0100" />
+      <IDSymbol name="cmdidFindDeprecatedStyles" value="0x0200" />
+      <IDSymbol name="cmdidFindRepeatedBlankLines" value="0x0300" />
+      <IDSymbol name="cmdidFindTrailingWhiteSpace" value="0x0400" />
+      <IDSymbol name="cmdidFindEmptyCatch" value="0x0500" />
+      <IDSymbol name="cmdidFindHardCodedStyles" value="0x0600" />
+      <IDSymbol name="cmdidFindCommentedCode" value="0x1000" />
+    </GuidSymbol>
+
+  </Symbols>
+
+</CommandTable>
