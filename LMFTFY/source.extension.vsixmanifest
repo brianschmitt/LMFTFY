@@ -2,16 +2,18 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="a443524d-9762-42d0-b152-8c2870b6efe0" Version="1.0" Language="en-US" Publisher="Brian Schmitt" />
-    <DisplayName>LMFTFY</DisplayName>
+    <DisplayName>Let me find that for you (LMFTFY)</DisplayName>
     <Description>Predefined search terms to help with development</Description>
     <MoreInfo>https://github.com/brianschmitt/LMFTFY</MoreInfo>
     <License>LICENSE</License>
-    <Icon>Package.ico</Icon>
+    <Icon>/Resources/Package.ico</Icon>
     <PreviewImage>Preview.png</PreviewImage>
     <Tags >Find Search Region Clean</Tags>
   </Metadata>
   <Installation InstalledByMsi="false">
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0]" />
+    <InstallationTarget Version="[12.0,13.0)" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="[12.0,13.0)" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[12.0,13.0)" Id="Microsoft.VisualStudio.Ultimate" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
