@@ -9,7 +9,7 @@ namespace BrianSchmitt.LMFTFY
         private const string codeFiletypes = "*.*";
         private const string allFiletypes = "*.*";
 
-        private DTE2 dte;
+        private readonly DTE2 dte;
 
         public Search(DTE2 dte)
         {
@@ -18,8 +18,8 @@ namespace BrianSchmitt.LMFTFY
 
         public void FindRegions(object sender, EventArgs e)
         {
-            /// ^.*\#(end)*(?([^\r\n])\s)*region.*\n
-            FindRegex("^.*\\#(end)*(?([^\\r\\n])\\s)*region.*\\n", allFiletypes);
+            /// ^.*\#(\s)*(end)*(?([^\r\n])\s)*region.*\n
+            FindRegex("^.*\\#(\\s)*(end)*(?([^\\r\\n])\\s)*region.*\\n", allFiletypes);
         }
 
         public void FindDeprecatedStyles(object sender, EventArgs e)
